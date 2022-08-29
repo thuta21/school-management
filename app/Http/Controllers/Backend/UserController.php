@@ -10,7 +10,17 @@ class UserController extends Controller
 {
     public function userView()
     {
-        $data['allOFTheUsers'] = User::all();
-        return view('backend.users.view_user');
+        $users = User::all();
+        return view('backend.users.view_user', compact('users'));
+    }
+
+    public function userAdd()
+    {
+        return view('backend.users.add_user');
+    }
+
+    public function userStore()
+    {
+        dd('worked');
     }
 }
