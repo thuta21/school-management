@@ -39,7 +39,8 @@
                                   <th>Role</th>
                                   <th>Name</th>
                                   <th>Email</th>
-                                  <th>Action</th>
+                                  <th>Edit</th>
+                                  <th>Delete</th>
                               </tr>
                           </thead>
                           <tbody>
@@ -50,8 +51,14 @@
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td>
-                                            <a href="" class="btn btn-warning">Edit</a>
-                                            <a href="" class="btn btn-danger">Delete</a>
+                                            <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning">Edit</a>
+                                        </td>
+                                        <td>
+                                            <form action="{{ route('users.destroy', $user->id) }}" method="post">
+                                                @method('DELETE')
+                                                @csrf
+                                                <input class="btn btn-danger" style="background-color: red" type="submit" value="Delete">
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
