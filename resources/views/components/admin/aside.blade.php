@@ -26,6 +26,34 @@
         <li class="treeview">
           <a href="#">
             <i data-feather="message-circle"></i>
+            <span>Manage User</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('users.index') }}"><i class="ti-more"></i>View User</a></li>
+            <li><a href="{{ route('users.create') }}"><i class="ti-more"></i>Add User</a></li>
+          </ul>
+        </li> 
+        
+        <li class="treeview">
+          <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Manage Profile</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('view-profile') }}"><i class="ti-more"></i>View Profile</a></li>
+            <li><a href="{{ route('users.create') }}"><i class="ti-more"></i>Change Password</a></li>
+          </ul>
+        </li> 	
+
+        <li class="treeview">
+          <a href="#">
+            <i data-feather="message-circle"></i>
             <span>Application</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -57,7 +85,9 @@
             <li><a href="components_nestable.html"><i class="ti-more"></i>Nestable</a></li>
             <li><a href="components_progress_bars.html"><i class="ti-more"></i>Progress Bars</a></li>
           </ul>
-        </li>	  
+        </li>	 
+        
+        
       </ul>
     </section>
 	
