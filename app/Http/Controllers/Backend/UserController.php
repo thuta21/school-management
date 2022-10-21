@@ -64,4 +64,17 @@ class UserController extends Controller
 
         return redirect()->route('users.index')->with($notification);
     }
+
+    public function viewProfile()
+    {
+        $authUser = auth()->user();
+        
+        return view('backend.users.view_profile', compact('authUser'));
+    }
+
+    public function editProfile()
+    {
+        $authUser = auth()->user();
+        return view('backend.users.edit_profile', compact('authUser'));
+    }
 }

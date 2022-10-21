@@ -42,8 +42,8 @@
                                             <select name="user_type" id="select" class="form-control">
                                                 <option value="">Select Your Role</option>
                                                 <option value="user" {{ $user->user_type == 'user' ? 'selected' : ''}}>User</option>
-                                                <option value="admin" {{ $user->user_type == 'user' ? 'selected' : ''}} >Admin</option>
-                                                <option value="editor" {{ $user->user_type == 'user' ? 'selected' : ''}} >Editor</option>
+                                                <option value="admin" {{ $user->user_type == 'admin' ? 'selected' : ''}} >Admin</option>
+                                                <option value="editor" {{ $user->user_type == 'editor' ? 'selected' : ''}} >Editor</option>
                                             </select>
                                         </div>
                                     </div>

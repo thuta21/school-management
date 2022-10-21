@@ -18,7 +18,8 @@ class UserSeeder extends Seeder
     public function run()
     {
         $faker = faker::create();
-        $user_type = ['admin' , 'editor', 'tester'];
+        $user_type = ['admin' , 'editor', 'tester', 'user'];
+        $gender = ['male', 'female'];
         $data = [];
         
         for ($i = 0; $i < 30; $i++)
@@ -29,6 +30,7 @@ class UserSeeder extends Seeder
                 'email' => $faker->unique()->safeEmail(),
                 'email_verified_at' => now(),
                 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+                'gender' => $gender[array_rand($gender)],
                 'remember_token' => Str::random(10),
             ];
         };

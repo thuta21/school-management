@@ -35,7 +35,21 @@
             <li><a href="{{ route('users.index') }}"><i class="ti-more"></i>View User</a></li>
             <li><a href="{{ route('users.create') }}"><i class="ti-more"></i>Add User</a></li>
           </ul>
-        </li> 	 
+        </li> 
+        
+        <li class="treeview">
+          <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Manage Profile</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('view-profile') }}"><i class="ti-more"></i>View Profile</a></li>
+            <li><a href="{{ route('users.create') }}"><i class="ti-more"></i>Change Password</a></li>
+          </ul>
+        </li> 	
 
         <li class="treeview">
           <a href="#">

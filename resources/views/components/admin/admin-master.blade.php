@@ -35,8 +35,6 @@
     <x-admin.right-sidebar></x-admin.right-sidebar>
   
 </div>
-<!-- ./wrapper -->
-  	
 	 
 	<!-- Vendor JS -->
 	<script src="{{ asset('backend/js/vendors.min.js') }}"></script>
@@ -110,6 +108,8 @@
    }
    @endif 
   </script>
+
+@yield('scripts')
 	
 	
 </body>

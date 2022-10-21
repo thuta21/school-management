@@ -47,9 +47,9 @@
                                 @foreach ($users as $key => $user)
                                     <tr>
                                         <td>{{ $key + 1 }}</td>
-                                        <td>{{ $user->user_type }}</td>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
+                                        <td>{{ optional($user)->user_type }}</td>
+                                        <td>{{ optional($user)->name }}</td>
+                                        <td>{{ optional($user)->email }}</td>
                                         <td>
                                             <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning">Edit</a>
                                         </td>
